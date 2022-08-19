@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --colour-one:rgb(231, 69, 199);
+    --colour-two:rgb(88, 255, 241);
+    --colour-three:rgb(162, 255, 115);
+    --colour-four:rgb(34, 34, 34);
+    --border-one:solid 2px rgb(255, 255, 255);
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: var(--colour-two);
+    margin: 2%;
+}
+
+p {
+    text-align: left;
+    font-size: 20px;
+}
+
+body{
+    size-adjust:inherit;
+    background-color: var(--colour-four);
+    margin:8%;
+}
+
+section{
+    padding:2%;
+}
+
+.box{
+    width:18%;
+}
+
+#one{
+    background-color: var(--colour-four);
+}
+
+#wrapper{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height:45vw;
+    margin:1%;
+}
+
+#hedra{
+    display: grid;
+    height:55vw;
+}
+
+#bg-grid-container{
+    background-color: var(--colour-two);
+    width: 100vw;
+    height:100vw;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.grid-item{
+    border: var(--border-one);
+    margin:2%;
+}
+
+.akira {  
+    display: grid;
+    height: 120vw;
+    grid-template-columns: 1fr 1fr 1.2fr 0.7fr 9.7fr 3.4fr 0.6fr 0.7fr 0.3fr 1fr 8.8fr;
+    grid-template-rows: 2.4fr 0.6fr 0.7fr 1fr 0.9fr 0.6fr 1.5fr 0.5fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 18px 8px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Panel-1 Panel-1 Panel-1 Panel-1 Panel-1 Panel-1 Panel-1 Panel-2 Panel-2 Panel-2 Panel-2"
+      "Panel-1 Panel-1 Panel-1 Panel-1 Panel-1 Panel-1 Panel-1 Panel-2 Panel-2 Panel-2 Panel-2"
+      "Panel-1 Panel-1 Panel-1 Panel-1 Panel-1 Panel-1 Panel-1 Panel-2 Panel-2 Panel-2 Panel-2"
+      "Panel-3 Panel-3 Panel-3 Panel-3 Panel-3 Panel-3 Panel-5 Panel-5 Panel-5 Panel-5 Panel-5"
+      "Panel-3 Panel-3 Panel-3 Panel-3 Panel-3 Panel-3 Panel-5 Panel-5 Panel-5 Panel-5 Panel-5"
+      "Panel-3 Panel-3 Panel-3 Panel-3 Panel-3 Panel-3 Panel-5 Panel-5 Panel-5 Panel-5 Panel-5"
+      "Panel-4 Panel-4 Panel-4 Panel-4 Panel-4 Panel-4 Panel-5 Panel-5 Panel-5 Panel-5 Panel-5"
+      "Panel-6 Panel-6 Panel-6 Panel-6 Panel-6 Panel-7 Panel-7 Panel-7 Panel-7 Panel-7 Panel-7"
+      "Panel-6 Panel-6 Panel-6 Panel-6 Panel-6 Panel-7 Panel-7 Panel-7 Panel-7 Panel-7 Panel-7"
+      "Panel-6 Panel-6 Panel-6 Panel-6 Panel-6 Panel-8 Panel-8 Panel-8 Panel-8 Panel-8 Panel-8"
+      "Panel-6 Panel-6 Panel-6 Panel-6 Panel-6 Panel-8 Panel-8 Panel-8 Panel-8 Panel-8 Panel-8";
+    background-color: var(--colour-four);
+  }
+
+.panel-border{
+    border:var(--border-one);
+}
+  
+  .Panel-2 { 
+    grid-area: Panel-2; 
+    background-color: var(--colour-two);
+}
+  
+  .Panel-1 { 
+    grid-area: Panel-1; 
+    background-color: var(--colour-one);
+}
+  
+  .Panel-5 { 
+    grid-area: Panel-5; 
+    background-color: var(--colour-three);
+}
+  
+  .Panel-3 { 
+    grid-area: Panel-3; 
+    background-color: var(--colour-two);
+}
+  
+  .Panel-4 { 
+    grid-area: Panel-4; 
+    background-color: var(--colour-one);
+}
+  
+  .Panel-6 { 
+    grid-area: Panel-6; 
+    background-color: var(--colour-three);
+}
+  
+  .Panel-7 { 
+    grid-area: Panel-7; 
+    background-color: var(--colour-two);
+}
+  
+  .Panel-8 { grid-area: Panel-8; 
+    background-color: var(--colour-one);
+}
+  

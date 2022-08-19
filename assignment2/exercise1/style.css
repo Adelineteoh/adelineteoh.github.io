@@ -4,17 +4,18 @@
 }
 
 :root{
-    --colour-one:rgb(83, 83, 83);
-    --colour-two:rgb(195, 63, 63);
-    --colour-three:rgb(123, 116, 202);
-    --colour-four:rgb(169, 217, 179);
-    --border-one:solid 2px rgb(189, 79, 253);
+    --colour-one:rgb(231, 69, 199);
+    --colour-two:rgb(88, 255, 241);
+    --colour-three:rgb(162, 255, 115);
+    --colour-four:rgb(34, 34, 34);
+    --border-one:solid 2px rgb(255, 255, 255);
 }
 
 h1 {
     text-align: center;
     font-size: 40px;
-    color: var(--colour-two)
+    color: var(--colour-two);
+    margin: 2%;
 }
 
 p {
@@ -24,9 +25,8 @@ p {
 
 body{
     size-adjust:inherit;
-    width:96%;
-    padding:2%;
     background-color: var(--colour-four);
+    margin:8%;
 }
 
 section{
@@ -44,12 +44,13 @@ section{
 #wrapper{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    height:40vw;
+    height:45vw;
+    margin:1%;
 }
 
 #hedra{
     display: grid;
-    height:60vw;
+    height:55vw;
 }
 
 #bg-grid-container{
@@ -64,6 +65,7 @@ section{
 
 .grid-item{
     border: var(--border-one);
+    margin:2%;
 }
 
 .akira {  
@@ -86,28 +88,49 @@ section{
       "Panel-6 Panel-6 Panel-6 Panel-6 Panel-6 Panel-7 Panel-7 Panel-7 Panel-7 Panel-7 Panel-7"
       "Panel-6 Panel-6 Panel-6 Panel-6 Panel-6 Panel-8 Panel-8 Panel-8 Panel-8 Panel-8 Panel-8"
       "Panel-6 Panel-6 Panel-6 Panel-6 Panel-6 Panel-8 Panel-8 Panel-8 Panel-8 Panel-8 Panel-8";
-    background-color: var(--colour-one);
+    background-color: var(--colour-four);
   }
 
 .panel-border{
     border:var(--border-one);
 }
   
-  .Panel-2 { grid-area: Panel-2; 
-
+  .Panel-2 { 
+    grid-area: Panel-2; 
+    background-color: var(--colour-two);
 }
   
-  .Panel-1 { grid-area: Panel-1; }
+  .Panel-1 { 
+    grid-area: Panel-1; 
+    background-color: var(--colour-one);
+}
   
-  .Panel-5 { grid-area: Panel-5; }
+  .Panel-5 { 
+    grid-area: Panel-5; 
+    background-color: var(--colour-three);
+}
   
-  .Panel-3 { grid-area: Panel-3; }
+  .Panel-3 { 
+    grid-area: Panel-3; 
+    background-color: var(--colour-two);
+}
   
-  .Panel-4 { grid-area: Panel-4; }
+  .Panel-4 { 
+    grid-area: Panel-4; 
+    background-color: var(--colour-one);
+}
   
-  .Panel-6 { grid-area: Panel-6; }
+  .Panel-6 { 
+    grid-area: Panel-6; 
+    background-color: var(--colour-three);
+}
   
-  .Panel-7 { grid-area: Panel-7; }
+  .Panel-7 { 
+    grid-area: Panel-7; 
+    background-color: var(--colour-two);
+}
   
-  .Panel-8 { grid-area: Panel-8; }
+  .Panel-8 { grid-area: Panel-8; 
+    background-color: var(--colour-one);
+}
   

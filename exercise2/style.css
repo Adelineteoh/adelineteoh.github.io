@@ -1,0 +1,200 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+/* Taking inspiration from one of Haruomi Hosono's albums records: Hosono House, I decided to run with the pink vinyl theme
+and curated a few shades of pinks, but also included black, grey, and white to imitate the album cover. I also made sure to
+ensure there was enough contrast in greyscale for accessibility.*/
+  --col-01:#570033;
+  --col-02:#b53693;
+  --col-03:#e680d0;
+  --col-04:#f6b5f5;
+  --col-05:rgb(36, 1, 15);
+  --col-06:rgb(241, 236, 238);
+  --col-07:#9f9f9f;
+  font-size: 16px;
+  --border-one:solid 5px rgb(36, 1, 15);
+}
+
+body{
+  padding: 3%;
+  background-color: var(--col-02);
+  color: var(--col-01);
+  transition: color 2s;
+}
+
+header{
+  width:100%;
+  padding:0%;
+}
+
+/* Although the navigation of each section was listed previously, I didn't like how it was positioned with the Dark Mode Button,
+and I also wanted to add one more picture, so I decided it would look better if they were also buttons and aligned with the Dark
+Mode/Light Mode button. I made sure the buttons themselves were distinctly different shades to the text and background */
+
+button {
+  background-color: #b53693;
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 80%;
+  font-family:'Courier New', Courier, monospace;
+  width: 13.9%;
+  height:50px;
+  margin:0%;
+}
+
+ol{
+  margin-left:.5%;
+  margin-left:.5%;
+}
+
+/* The album I referenced, besides the pink, and monochrome, also had text in gold and a teal blue. I couldn't quite incorporate the
+burnt gold colour, but I liked how the teal popped against the shades of pink, and the light grey of the boxes. It was a nice cool tone
+colour against all the warm pinks.*/
+a{
+  color: #42bbd7;
+}
+
+a.nav{
+  color: white;
+}
+
+body{
+  padding: 1rem;
+  fill-opacity: 50%;
+  color: var(--col-05);
+}
+
+section{
+  margin-bottom: 2rem;
+  background-color: var(--col-06);
+  border-style:double;
+  border-radius:15px;
+  padding:10px;
+  margin:2%;
+}
+
+h1{
+  font-size: 3rem;
+  transition: 1s;
+  font-family:'Courier New', monospace;
+  color:var(--col-01);
+}
+
+h1:hover{
+  color:var(--col-02);
+  transition: 0s;
+  animation: colourCycle 1.5s ease-in 1;
+}
+
+@keyframes colourCycle {
+  0%{color:#b53693;}
+  25%{color: #e680d0;}
+  50%{color:#f6b5f5;}
+  75%{color: #e680d0;}
+  100%{color:#b53693;}
+}
+
+/* I wanted more dimension to the boxes, and thus added a dark background to the text, which provided a nice contrast,
+and a greater spectrum of the monochromatic theme on the vinyl cover.I liked the clean separation it created as well. */
+
+h2{
+  font-size: 2rem;
+  font-family:'Courier New', monospace;
+  color:var(--col-07);
+  background-color: var(--col-05);
+  padding-left:1%;
+  padding-top:.5%;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+  color: #39adc7;
+  font-style:italic;
+  font-family:'Courier New', monospace;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+  text-align: left;
+}
+
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+img{
+  width:40%;
+  height:auto;
+  align-self:center;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+
+/* I wasn't too fond about how the references were squished into two separate columns and had bits which overlapped, as it made
+reading it a bit frustrating. Thus I expanded the column width to make just one, wide column. */
+.res-columns{
+  column-width: 28rem;
+}
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+}
+
+@media all and (prefers-reduced-motion) {
+
+}

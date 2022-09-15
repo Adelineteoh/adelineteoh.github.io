@@ -1,0 +1,135 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+/* As cooking is a nice leisure activity which can be fun, I wanted a lighter colour palette,
+without being in-your-face, and so I chose a nice calm lavender, a darker, deeper purple, white,
+a pale green which contrasted with the purple just enough, without taking the attention away from
+everything else. */
+
+:root{
+  --col-01:#acaddc;
+  --col-02:#f0f6f0;
+  --col-03:#5252ff;
+  --col-04:#d2fd9e;
+}
+
+body{
+  background-color: var(--col-01);
+  color: var(--col-02);
+  padding: 2vw;
+}
+
+a {
+  color: var(--col-04);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--col-03);
+  text-decoration: underline;
+}
+
+hr {
+  margin-top: 1vh;
+}
+
+/* I went on GoogleFonts and found the Exo Sans Serif font, which I really liked for the bold
+and blocky design, as well as how it incorporated both harsh edges and soft curves, a design
+I thought would fit the colour scheme and general layout I had in mind. I didn't want everything
+so clear cut. I wanted structure, but also flexibility. */
+h1{
+  font-family: 'Exo', sans-serif;
+  font-size: 50px;
+}
+
+h2{
+font-family: 'Exo', sans-serif;
+}
+
+#list-filter-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.FilterCategoryWrapper{
+  display: flex;
+}
+
+/* this is the filter category heading */
+summary {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.FilterSelector {
+  font-size: 3rem;
+  background-color: transparent;
+  color: var(--col-02);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+}
+.FilterSelector:hover {
+  color: var(--col-03);
+}
+.FilterSelector:active {
+  color: var(--col-03);
+}
+.ActiveCategory {
+  background-color: var(--col-02);
+  color: var(--col-01); 
+}
+
+
+#recipe-list-wrapper{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+/* I had to add the bottom padding to the RecipeCardWrapper as when the screen is adjusted, the
+text slips past the border. */
+.RecipeCardWrapper{
+  height: 30rem;
+  width:40%;
+  padding: 1.5rem;
+  border: solid var(--col-02) 2px;
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10rem;
+}
+
+.RecipeImg{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.RecipeTitle{
+  font-size: 2rem;
+  text-align: center;
+}
+.RecipeAuthor{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+
+@media all and (min-width: 768px) {
+  
+  hr {
+    margin-bottom: 2vw;
+  }
+
+  #list-filter-wrapper{
+    flex-direction: row;
+  }
+
+  .FilterSelector {
+    text-align: unset;
+    width: unset;
+  }
+  
+}

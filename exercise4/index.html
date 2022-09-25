@@ -1,0 +1,40 @@
+<!-- This exercise is built off the MDN Video and Audio APIs tutorial written by MDN contributors  -->
+<!-- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs -->
+<!-- The base files from the example were modified and filled in via the tutorial and some extra commenting by Patrick McMahon -->
+<!-- Orginal Files: https://github.com/mdn/learning-area/blob/main/javascript/apis/video-audio/start/media-player-start.zip -->
+
+<!DOCTYPE HTML>
+<html lang="en-gb">
+  <head>
+  	<meta charset="utf-8">
+  	<title>Video player example</title>
+  	<link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <h1>Handheld Windmill Fan - Craft Tutorial</h1>
+    <div class="player">
+
+      <video id="media" controls style="float:left;">
+        <source src= https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/berry-bunch_handheld-windmill-fan.mp4 type="video/mp4">
+      </video>  
+
+      <div class="controls video-controls">
+
+        <button class="play" data-icon="P" aria-label="play pause toggle"></button>
+        <button class="stop" data-icon="S" aria-label="stop"></button>
+        <button class="mute" data-icon="Q" aria-label="mute audio"></button>
+        <div class="timer"><div class="timer-bar"></div><span aria-label="timer" class="timer-span">00:00</span></div>
+        <button class="rwd" data-icon="B" aria-label="rewind"></button>
+        <!-- I placed the chapter button in between the rewind and fast forward buttons as it is a compromise between them. In the case where the users wish to look for
+          a specific part of the video, this button allows them to jump to the key transition points in the video (from the introduction of materials, to the windmill
+          section, and then finally the stalk of the windmill. These distinct separations will allow the users to jump between parts without having to wait minutes for
+          the rewind and fast forward buttons for a long time.) */-->
+        <button class="goback" data-icon="U" aria-label="returntochapter"></button>
+        <button class="fwd" data-icon="F" aria-label="fast forward"></button>
+
+      </div>
+    </div>
+    <script src="custom-player.js"></script>
+  </body>
+</html>

@@ -13,7 +13,7 @@
 * {box-sizing:border-box}
 
 body {
-    background-image: url("/imgs/woodtable.png");
+    background-image: url("/assignment3/imgs/woodtable.png");
     position: relative;
     max-width: 100%;
     height:auto;

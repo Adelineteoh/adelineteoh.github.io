@@ -1,0 +1,270 @@
+
+
+@font-face {
+  font-family: 'HeydingsControlsRegular';
+  src: url('fonts/heydings_controls-webfont.eot');
+  src: url('fonts/heydings_controls-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/heydings_controls-webfont.woff') format('woff'),
+       url('fonts/heydings_controls-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {box-sizing:border-box}
+
+body {
+    background-image: url("/imgs/woodtable.png");
+    position: relative;
+    max-width: 100%;
+    height:auto;
+}
+
+h1{
+    font-family: 'Gaegu', cursive;
+    font-size:50px;
+    margin:5px;
+    margin-top:10px;
+    position:center;
+    color:antiquewhite;
+}
+
+h2{
+    font-family: 'Gaegu', cursive;
+    color:antiquewhite;
+    font-size:35px;
+    margin:5px;
+
+}
+
+.container{
+  max-width: 100%;
+  position:absolute;
+}
+
+button{
+max-width:5rem;
+}
+
+div{
+  align-items: center;
+}
+
+.player {
+  position:center;
+  margin-top: 1%;
+}
+
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+}
+
+@media all and (prefers-reduced-motion) {
+
+}
+
+
+.transition {
+  max-width: 100%;
+  position:relative;
+  
+}
+
+
+
+/*Player and Buttons*/
+
+.music {
+  width: 20rem;
+  height:auto;
+  margin-left: 35%;
+  position: relative;
+  display:block;
+}
+
+.player:hover .controls, player:focus .controls {
+  opacity: 1;
+}
+
+button:before {
+  font-family: HeydingsControlsRegular;
+  font-size: 20px;
+  position: relative;
+  content: attr(data-icon);
+  text-shadow: 1px 1px 0px black;
+}
+
+.play:before {
+  font-size: 22px;
+}
+
+button, .timer {
+  height: 38px;
+  line-height: 19px;
+  box-shadow: inset 0 -5px 25px rgba(0,0,0,0.3);
+  border-right: 1px solid #333;
+}
+
+button {
+  display:block;
+  border: 0;
+  flex: 1;
+  outline: none;
+}
+
+.playmusic {
+  border-radius: 10px 0 0 10px;
+}
+
+.restart{
+  border-radius: 0 10px 10px 0;
+}
+
+button:hover,button:focus {
+  box-shadow: inset 1px 1px 2px black;
+}
+
+button:active {
+  box-shadow: inset 3px 3px 2px black;
+}
+
+
+
+/*Animation Sequence*/
+
+.animation{
+  grid-area: basic-book; 
+  max-width:100%;
+  height:auto;
+  position: absolute;
+  display:none;
+  top:0;
+  margin-top: -9%;
+  margin-left:-12.5%;
+}
+
+/*grid*/
+
+.container {  
+  max-width:90%;
+  position: absolute;
+  right:7%;
+  display: grid;
+  grid-template-columns: 0.4fr 2.4fr 0.4fr;
+  grid-template-rows: 0fr 2.2fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "title title title"
+    "rwd basic-book fwd"
+    ". controls .";
+}
+
+.basic-book { 
+  grid-area: basic-book; 
+  max-width:100%;
+  height:auto;
+  position: relative;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+.fwd { 
+  grid-area: fwd;
+  width: 3rem;
+  margin: 1rem;
+  border-radius: 10px 10px 10px 10px;
+  flex:auto;
+ }
+
+.rwd { 
+  grid-area: rwd;
+  width: 3rem;
+  margin: 1rem;
+  border-radius: 10px 10px 10px 10px;
+  flex:auto;
+ }
+
+.controls { 
+  grid-area: controls;
+  opacity: 0.5;
+  width: 15rem;
+  border-radius: 10px;
+  position: relative;
+  left: 35%;
+  background-color: black;
+  box-shadow: 3px 3px 5px black;
+  transition: 1s all;
+  display: flex;
+  margin:1rem;
+}
+
+.title { 
+  grid-area: title; 
+} 
+ 
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 80%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Next/previous controls */
+
+/* For additional features, I had a gif animation prepared as a transition between pages, but after testing out multiple (at least ten)
+different methods suggested online, I simply couldn't find one which could work in tandem with the Slideshow. Moreover, it was incredibly
+difficult trying to overlay the animation directly on top of the slideshow even for a few seconds each time. I ended up leaving the code in,
+but as the gif did not work, I considered it scrapped. */

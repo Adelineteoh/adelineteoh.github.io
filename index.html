@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,600;1,300&family=Gaegu&family=Merriweather+Sans:ital,wght@0,400;1,800&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <div class="title">
+            <h1> Ms Pippa and the Future </h1>
+            <h2> by Peter </h2>
+        </div> 
+
+        <audio class="music" id="media" controls preload="auto">
+            <source src="warmth.mp3" id="bgmusic" type="audio/mp3">
+        </audio>
+
+        <!-- Slideshow container -->
+        <!-- I looked up multiple ways I could set up the pages of the book, including methods such as making a html FlipBook, or using
+            pagination, but in the end I chose to use a Slideshow because I felt more comfortable with it and it was a lot simpler for me 
+            to set one up with my current skillset. To emulate a real book as much as possible, I removed the dots and captions, as well
+            as the pagecount number which slideshows typically have, keeping it plain and simple. I didn't want the audience to have any
+            inkling as to how many pages there are, and I wanted it to look as similar as possible to a physical book-->
+        <div class="slideshow-container">
+
+            <div class="mySlides">
+                <img src="imgs/bookclosed.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="imgs/openpage.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="imgs/p1.png" style="width:100%">
+            </div>
+  
+            <div class="mySlides">
+                <img src="imgs/p2.png" style="width:100%">
+            </div>
+  
+            <div class="mySlides">
+                <img src="imgs/p3.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="imgs/p4.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="imgs/p5.png" style="width:100%">
+            </div>
+  
+            <div class="mySlides">
+                <img src="imgs/p6.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="imgs/p7.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="imgs/p8.png" style="width:100%">
+            </div>
+  
+            <div class="mySlides">
+                <img src="imgs/p9.png" style="width:100%">
+            </div>
+  
+            <!-- Next and previous buttons -->
+            <!-- I also attempted to insert sound effects to the button, but I'm not sure if it was quite effective -->
+            <audio id="sfx"><source src="bookflip.mp3"></audio>
+
+            <a class="prev" id="btn" onclick="plusSlides(-1);playsound()">&#10094;</a>
+            <a class="next" id="btn" onclick="plusSlides(1);playsound()">&#10095;</a>
+        
+        </div>
+        <br>
+
+   </body> 
+
+</html>
+
+
+
+
+<!-- Initial Attempt -->
+<!-- I wanted to show what I tried prior to settling on the Slideshow option. It was definitely simple and would have been difficult to
+    execute my plans in -->
+
+         <!--Book
+
+        <div class="container">
+            <div class="basic-book">
+                <img class="basic-book" src="imgs/p1.png" id="firstpage" alt="Static Image">
+                <img class="animation" src="imgs/pageturn.gif" id="flip">
+            </div>    
+            <div class="fwd">
+                <button class="fwd" data-icon="F" onclick="show()" id="transition" aria-label="fast forward"></button>
+            </div>
+            <div class="rwd">
+                <button class="rwd" data-icon="B" aria-label="rewind"></button>
+            </div>
+            <div class="controls">
+                <button class="playmusic" data-icon="P"></button>
+                <button class="mute" data-icon="Q" aria-label="mute audio"></button>
+                <button class="restart" data-icon="U" onclick="firstpage()" id="return"></button>
+            </div> 
+        </div>
+    -->
